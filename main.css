@@ -164,8 +164,8 @@ body {
 @media screen and (max-width: 600px) {
   .MainAppContainer {
     padding: 0;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 120vh;
+    max-height: 400px;
   }
   .MainAppContainer .AppContainer {
     height: 950px;
@@ -194,17 +194,18 @@ body {
   .attribution {
     gap: 5px;
     font-size: 12px;
+    display: none;
   }
   #SuccessMessageBox {
     padding: 0.5em;
     justify-content: center;
     gap: 50px;
-    height: 900px;
+    height: 140%;
     width: 100%;
   }
   #SuccessMessageBox #DismissMsgBtn {
     position: relative;
     padding: 1em;
-    top: 200px;
+    top: 50px;
   }
 }/*# sourceMappingURL=main.css.map */
