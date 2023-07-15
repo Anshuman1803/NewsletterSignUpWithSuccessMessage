@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+}
+
+.MainAppContainer {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+}
+
+.AppContainer {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: hsl(0, 0%, 100%);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  gap: 10px;
+}
+.AppContainer .LeftAppContainer {
+  border-radius: 10px;
+  width: 60%;
+  height: 100%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.AppContainer .LeftAppContainer h1 {
+  color: hsl(234, 29%, 20%);
+  font-weight: 700;
+  font-size: 40px;
+}
+.AppContainer .LeftAppContainer p {
+  color: hsl(235, 18%, 26%);
+}
+.AppContainer .LeftAppContainer .List {
+  display: flex;
+  gap: 10px;
+  color: hsl(235, 18%, 26%);
+  font-size: 16px;
+}
+.AppContainer .LeftAppContainer form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: hsl(235, 18%, 26%);
+  font-size: 16px;
+}
+.AppContainer .LeftAppContainer form .Email-ErrorBox {
+  display: flex;
+  flex-direction: column;
+  color: hsl(235, 18%, 26%);
+}
+.AppContainer .LeftAppContainer form .Email-ErrorBox .LabelErrorBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+}
+.AppContainer .LeftAppContainer form .Email-ErrorBox .LabelErrorBox #ErrorMsg {
+  color: hsl(4, 100%, 67%);
+  display: none;
+}
+.AppContainer .LeftAppContainer form .Email-ErrorBox input {
+  border-radius: 5px;
+  padding: 1em;
+  border: 1px solid hsl(231, 7%, 60%);
+}
+.AppContainer .LeftAppContainer form .Email-ErrorBox input:focus {
+  outline: none;
+}
+.AppContainer .LeftAppContainer form #SubscribeButton {
+  border-radius: 5px;
+  padding: 1em 0.5em;
+  border: none;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  font-size: 14px;
+}
+.AppContainer .LeftAppContainer form #SubscribeButton:hover {
+  cursor: pointer;
+  background-color: hsl(4, 100%, 67%);
+}
+.AppContainer .RightAppContainer {
+  border-radius: 10px;
+  width: 40%;
+  height: 100%;
+  background-image: url(./images/illustration-sign-up-desktop.svg);
+  background-position: center;
+  background-size: cover;
+}
+
+.attribution {
+  width: 100%;
+  padding: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: white;
+  font-size: 20px;
+}
+.attribution a {
+  color: orange;
+}
+.attribution a:hover {
+  color: hsl(4, 100%, 67%);
+}
+
+#SuccessMessageBox {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  width: 400px;
+  height: 425px;
+  margin: auto;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 2em;
+}
+#SuccessMessageBox img {
+  width: 50px;
+}
+#SuccessMessageBox h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+#SuccessMessageBox p {
+  font-size: 16px;
+  color: hsl(235, 18%, 26%);
+  font-weight: 400;
+}
+#SuccessMessageBox #SubscriberMail {
+  font-weight: 700;
+  color: hsl(234, 29%, 20%);
+}
+#SuccessMessageBox #DismissMsgBtn {
+  border: none;
+  border-radius: 10px;
+  padding: 1em;
+  background-color: hsl(234, 29%, 20%);
+  color: hsl(0, 0%, 100%);
+  font-weight: 800;
+}
+#SuccessMessageBox #DismissMsgBtn:hover {
+  cursor: pointer;
+  background-color: hsl(4, 100%, 67%);
+}
+
+@media screen and (max-width: 600px) {
+  .MainAppContainer {
+    padding: 0;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .MainAppContainer .AppContainer {
+    height: 950px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    flex-direction: column-reverse;
+  }
+  .MainAppContainer .AppContainer .LeftAppContainer {
+    width: 100%;
+    height: 60%;
+    gap: 30px;
+  }
+  .MainAppContainer .AppContainer .LeftAppContainer form {
+    gap: 20px;
+  }
+  .MainAppContainer .AppContainer .RightAppContainer {
+    height: 40%;
+    width: 100%;
+    background: none;
+    background-image: url(./images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .attribution {
+    gap: 5px;
+    font-size: 12px;
+  }
+  #SuccessMessageBox {
+    padding: 0.5em;
+    justify-content: center;
+    gap: 50px;
+    height: 900px;
+    width: 100%;
+  }
+  #SuccessMessageBox #DismissMsgBtn {
+    position: relative;
+    padding: 1em;
+    top: 200px;
+  }
+}/*# sourceMappingURL=main.css.map */
